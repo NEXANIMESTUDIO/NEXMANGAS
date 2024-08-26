@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEXSTUDIO - Playlist</title>
+    <!-- Boxicons CSS for icons -->
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <style>
+        /* Basic Reset */
+        * { padding: 0; margin: 0; box-sizing: border-box; }
+
+        /* General Styles */
+        body { background-color: #000; font-family: Arial, sans-serif; color: #fff; transition: background-color 0.5s, color 0.5s; }
+        a { text-decoration: none; color: inherit; }
+
+        /* Navigation Styles */
+        nav { width: 100%; height: 80px; background-color: #121212; color: white; display: flex; justify-content: space-between; align-items: center; padding: 0 50px; position: sticky; top: 0; z-index: 1000; }
+        .logo a { font-size: 1.8em; font-weight: bold; color: yellow; }
+        .nav-links { list-style: none; display: flex; align-items: center; }
+        .nav-links li { margin-left: 30px; }
+        .nav-links a { font-size: 1.1em; position: relative; }
+        .nav-links a:hover::after { content: ''; position: absolute; bottom: -5px; left: 0; width: 100%; height: 2px; background: yellow; }
+        .dark-light { cursor: pointer; font-size: 1.5em; }
+
+        /* Header Section */
+        header { width: 100%; height: 60vh; background: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.2)), url('img/hd.jpg') no-repeat center center/cover; display: flex; justify-content: center; align-items: center; text-align: center; }
+        header h1 { font-size: 3em; color: yellow; margin-bottom: 20px; }
+        header p { font-size: 1.2em; }
+
+        /* Playlist Section */
+        .playlist-section { padding: 50px 20px; background-color: #1a1a1a; }
+        .playlist-container { display: flex; flex-wrap: wrap; justify-content: space-around; gap: 20px; }
+        .video-item { background-color: #2b2b2b; border-radius: 10px; overflow: hidden; width: 300px; transition: transform 0.3s, background-color 0.3s; }
+        .video-item img { width: 100%; cursor: pointer; }
+        .video-item h3 { padding: 10px; color: yellow; }
+        .video-item p { padding: 0 10px 10px; color: #ddd; }
+        .video-item a { display: block; padding: 10px 20px; background-color: yellow; color: black; text-align: center; font-weight: bold; border-radius: 0 0 10px 10px; transition: background-color 0.3s; }
+        .video-item a:hover { background-color: indianred; color: white; }
+        .video-item:hover { transform: scale(1.05); background-color: yellow; color: black; }
+        .video-item:hover h3, .video-item:hover p { color: black; }
+
+        /* Footer Styles */
+        footer { background-color: #000; color: white; text-align: center; padding: 20px 0; }
+        footer p span { color: yellow; }
+
+        /* Light Theme Styles */
+        .light-theme { background-color: white; color: black; }
+        .light-theme nav { background-color: #f0f0f0; color: black; }
+        .light-theme .logo a { color: blue; }
+        .light-theme .nav-links a:hover::after { background: blue; }
+        .light-theme header { background: linear-gradient(rgba(255,255,255,0.8),rgba(255,255,255,0.2)), url('img/landing.jpg') no-repeat center center/cover; }
+        .light-theme header h1 { color: blue; }
+        .light-theme .playlist-section { background-color: #e0e0e0; color: black; }
+        .light-theme .video-item { background-color: #ccc; }
+        .light-theme .video-item a { background-color: blue; color: white; }
+        .light-theme .video-item a:hover { background-color: darkblue; }
+        .light-theme footer { background-color: #333; color: white; }
+        .light-theme footer p span { color: blue; }
+        .light-theme .dark-light { color: black; }
+    </style>
+</head>
+<body>
+
+<!-- Navigation Bar -->
+<nav>
+    <div class="logo"><a href="#">NEXSTUDIO</a></div>
+    <ul class="nav-links">
+        <li><a href="https://nexanimestudio.github.io/NEXMANGA/index.html">Home</a></li>
+        <li><a href="https://nexanimestudio.github.io/NEXMANGA/manga.html">Mangas</a></li>
+        <li><a href="https://nexanimestudio.github.io/NEXMANGA/mangaexplaination.html">Manga Explanation</a></li>
+        <li><a href="https://nexanimestudio.github.io/NEXMANGA/contact.html">Contact</a></li>
+    </ul>
+    <div class="dark-light">
+        <i class='bx bx-moon moon'></i>
+        <i class='bx bx-sun sun' style="display:none;"></i>
+    </div>
+</nav>
+
+<!-- Header Section -->
+<header>
+    <div>
+        <h1>Explore Our Solo leveling Ragnarok Playlists</h1>
+        <p>Discover a wide variety of curated content</p>
+    </div>
+</header>
+
+<!-- Playlist Section -->
+<section class="playlist-section">
+    <div class="playlist-container">
+        <div class="video-item">
+            <img src="img/slrc1-t.webp" alt="Video 1">
+            <h3>Chapter 1</h3>
+            <p>English, malyalam, hindi</p>
+            <a href="slrc1/slrc1.html">Watch Now</a>
+        </div>
+        <div class="video-item">
+            <img src="img/sc2--1.webp" alt="Video 2">
+            <h3>chapter 2</h3>
+            <p>English, malyalam, hindi</p>
+            <a href="slrc1/slrc2.html">Watch Now</a>
+        </div>
+        <div class="video-item">
+            <img src="img/3sr1.webp" alt="Video 3">
+            <h3>chapter 3</h3>
+            <p>English, malyalam, hindi</p>
+            <a href="slrc1/slrc3.html">Watch Now</a>
+        </div>
+        <!-- Add more video items as needed -->
+    </div>
+</section>
+
+<section class="playlist-section">
+    <div class="playlist-container">
+        <div class="video-item">
+            <img src="img/4sr1.webp" alt="Video 4">
+            <h3>Chapter 4</h3>
+            <p>English, malyalam, hindi</p>
+            <a href="slrc1/slrc4.html">Watch Now</a>
+        </div>
+        <div class="video-item">
+            <img src="img/5sr1.webp" alt="Video 2">
+            <h3>chapter 5</h3>
+            <p>English, malyalam, hindi</p>
+            <a href="slrc1/slrc5.html">Watch Now</a>
+        </div>
+        <div class="video-item">
+            <img src="img/6sr1.webp" alt="Video 3">
+            <h3>chapter 6</h3>
+            <p>English, malyalam, hindi</p>
+            <a href="slrc1/slrc6.html">Watch Now</a>
+        </div>
+        <!-- Add more video items as needed -->
+    </div>
+</section>
+
+<section class="playlist-section">
+    <div class="playlist-container">
+        <div class="video-item">
+            <img src="img/7sr1.webp" alt="Video 1">
+            <h3>Chapter 7</h3>
+            <p>English, malyalam, hindi</p>
+            <a href="slrc1/slrc7.html">Watch Now</a>
+        </div>
+        <div class="video-item">
+            <img src="img/8sr1.webp" alt="Video 2">
+            <h3>chapter 8</h3>
+            <p>English, malyalam, hindi</p>
+            <a href="slrc1/src8.html">Watch Now</a>
+        </div>
+        <div class="video-item">
+            <img src="img/9sr1.webp" alt="Video 3">
+            <h3>chapter 9</h3>
+            <p>English, malyalam, hindi</p>
+            <a href="slrc1/src9.html">Watch Now</a>
+        </div>
+        <!-- Add more video items as needed -->
+    </div>
+</section>
+
+<section class="playlist-section">
+    <div class="playlist-container">
+        <div class="video-item">
+            <img src="img/10sr1.webp" alt="Video 1">
+            <h3>Chapter 10</h3>
+            <p>English, malyalam, hindi</p>
+            <a href="slrc1/src10.html">Watch Now</a>
+        </div>
+        <div class="video-item">
+            <img src="img/11sr1.webp" alt="Video 2">
+            <h3>chapter 11</h3>
+            <p>English, malyalam, hindi</p>
+            <a href="slrc1/src11.html">Watch Now</a>
+        </div>
+        <div class="video-item">
+            <img src="img/12sr1.webp" alt="Video 3">
+            <h3>chapter 12</h3>
+            <p>English, malyalam, hindi</p>
+            <a href="slrc1/src12.html">Watch Now</a>
+        </div>
+        <!-- Add more video items as needed -->
+    </div>
+</section>
+
+<section class="playlist-section">
+    <div class="playlist-container">
+        <div class="video-item">
+            <img src="img/13sr1.webp" alt="Video 1">
+            <h3>Chapter 13</h3>
+            <p>English, malyalam, hindi</p>
+            <a href="slrc1/src13.html">Watch Now</a>
+        </div>
+        <div class="video-item">
+            <img src="img/14sr1.webp" alt="Video 2">
+            <h3>chapter 14</h3>
+            <p>English, malyalam, hindi</p>
+            <a href="slrc1/src14.html">Watch Now</a>
+        </div>
+        <div class="video-item">
+            <img src="img/15sr1.webp" alt="Video 3">
+            <h3>chapter 15</h3>
+            <p>English, malyalam, hindi</p>
+            <a href="slrc1/src15.html">Watch Now</a>
+        </div>
+        <!-- Add more video items as needed -->
+    </div>
+</section>
+<!-- Footer -->
+<footer>
+    <p>&copy; 2024 Copyright Reserved by <span>NexStudio</span></p>
+</footer>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const themeToggle = document.querySelector('.dark-light');
+        const body = document.body;
+        const moonIcon = document.querySelector('.bx-moon');
+        const sunIcon = document.querySelector('.bx-sun');
+
+        themeToggle.addEventListener('click', () => {
+            body.classList.toggle('light-theme');
+            moonIcon.style.display = moonIcon.style.display === 'none' ? 'inline' : 'none';
+            sunIcon.style.display = sunIcon.style.display === 'none' ? 'inline' : 'none';
+        });
+    });
+</script>
+
+</body>
+</html>
