@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- ===== CSS ===== -->
+    <link rel="stylesheet" href="style.css">
+    <!-- ===== Boxicons CSS ===== -->
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <title>NEXANIMESTUDIO</title>
+    <style type="text/css">
+        /* Basic Reset */
+        * { padding: 0; margin: 0; box-sizing: border-box; }
+
+        /* General Styles */
+        body { background-color: black; font-family: sans-serif; }
+        header { width: 100%; height: 100vh; background: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.2)), url('img/render.jpg') no-repeat center center/cover; }
+        nav { width: 100%; height: 100px; color: white; display: flex; justify-content: space-around; align-items: center; }
+        .logo { font-size: 2em; letter-spacing: 2px; }
+        .menu a { text-decoration: none; color: white; padding: 10px 20px; font-size: 20px; position: relative; }
+        .menu a:before { content: ''; position: absolute; top:0; left: 0; width:0%; height: 100%; border-bottom: 2px solid indianred; transition: 0.4s linear; }
+        .menu a:hover:before { width: 90%; }
+        .Join a { text-decoration: none; color: black; padding: 10px 20px; font-size: 20px; background: yellow; border-radius: 8px; transition: 0.4s; }
+        .Join a:hover { background: transparent; border: 1px solid indianred; }
+        .h-txt { max-width: 650px; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center; color: white; }
+        .h-txt span { letter-spacing: 5px; }
+        .h-txt h1 { font-size: 3.5em; }
+        .h-txt a { text-decoration: none; background: yellow; color: black; padding: 10px 20px; letter-spacing: 5px; transition: 0.4s; }
+        .h-txt a:hover { background: transparent; border: 1px solid indianred; color: black; }
+
+        /* Popup Styles */
+        .popup-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.8); display: none; justify-content: center; align-items: center; z-index: 999; }
+        .popup-content { background: url('img/hd.jpg') no-repeat center center/cover; padding: 30px; border-radius: 10px; text-align: center; color: white; position: relative; }
+        .popup-content h2 { margin-bottom: 20px; font-size: 2em; }
+        .popup-btn { display: inline-block; margin: 10px 20px; padding: 10px 20px; font-size: 18px; background: yellow; color: black; text-decoration: none; border-radius: 8px; transition: 0.4s; }
+        .popup-btn:hover { background: transparent; border: 1px solid indianred; color: black; }
+        .popup-close { position: absolute; top: 10px; right: 10px; font-size: 1.5em; cursor: pointer; }
+
+        /* New Section Styles */
+        .info-section { padding: 50px 0; background-color: #121212; color: white; text-align: center; }
+        .info-section h2 { font-size: 2.5em; margin-bottom: 20px; }
+        .info-section p { font-size: 1.2em; max-width: 800px; margin: 0 auto; line-height: 1.5; }
+        .info-section .highlight { color: indianred; font-weight: bold; }
+        .info-section .features { display: flex; justify-content: center; margin-top: 30px; }
+        .info-section .feature { margin: 0 20px; }
+        .info-section .feature img { width: 320px; height: 380px; margin-bottom: 10px; }
+        .info-section .feature h3 { font-size: 1.5em; margin-bottom: 10px; }
+        .info-section .feature p { font-size: 1em; }
+    </style>
+</head>
+<body>
+<header>
+    <nav>
+        <div class="nav-bar">
+            <i class='bx bx-menu sidebarOpen'></i>
+            <span class="logo navLogo"><a href="#">NEXMANGAS</a></span>
+            <div class="menu">
+                <div class="logo-toggle">
+                    <span class="logo"><a href="#">NEXMANGAS</a></span>
+                    <i class='bx bx-x siderbarClose'></i>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="manga.html">Mangas</a></li>
+                    <li><a href="mangaexplaination">Manga Explanation</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="#">Other</a></li>
+                </ul>
+            </div>
+            <div class="darkLight-searchBox">
+                <div class="dark-light">
+                    <i class='bx bx-moon moon'></i>
+                    <i class='bx bx-sun sun'></i>
+                </div>
+                <div class="searchBox">
+                    <div class="searchToggle">
+                        <i class='bx bx-x cancel'></i>
+                        <i class='bx bx-search search'></i>
+                    </div>
+                    <div class="search-field">
+                        <input type="text" placeholder="Search...">
+                        <i class='bx bx-search'></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    
+    <script src="script.js"></script>
+    
+    <section class="h-txt">
+        <span>Enjoy</span>
+        <h1>Best Indian Anime Dubs</h1>
+        <br>
+        <a href="#" id="watchNowBtn">Watch Now</a>   
+    </section>
+</header>
+
+<!-- Popup HTML -->
+<div id="popup" class="popup-overlay">
+    <div class="popup-content">
+        <h2>Please Select Your Category</h2>
+        <a href="manga.html" class="popup-btn">Read Mangas</a>
+        <a href="mangaexplaination.html" class="popup-btn">Manga Explanation</a>
+        <span class="popup-close">&times;</span>
+    </div>
+</div>
+
+<!-- New Info Section -->
+<section class="info-section">
+    <h2>Welcome to <span class="highlight">NEXSTUDIO</span></h2>
+    <p>Explore the world of Mangas and Anime with <span class="highlight">NEXSTUDIO</span>. Whether you're a fan of action-packed series, heartfelt romances, or deep philosophical tales, we have something for everyone. Dive into our extensive collection and find your next favorite Manga today!</p>
+    <div class="features">
+        <div class="feature">
+            <img src="img/hdcollection.png" alt="Feature 1">
+            <h3>Vast Collection</h3>
+            <p>Discover thousands of Mangas from various genres and styles.</p>
+        </div>
+        <div class="feature">
+            <img src="img/renderscan.png" alt="Feature 2">
+            <h3>High Quality</h3>
+            <p>Enjoy high-quality translations and scans for the best reading experience.</p>
+        </div>
+        <div class="feature">
+            <img src="img/feature3.png" alt="Feature 3">
+            <h3>Community</h3>
+            <p>Join our community and share your love for Mangas with fellow fans.</p>
+        </div>
+    </div>
+</section>
+
+<script type="text/javascript">
+    document.addEventListener('DOMContentLoaded', (event) => {
+        const popup = document.getElementById('popup');
+        const watchNowBtn = document.getElementById('watchNowBtn');
+        const closeBtn = document.querySelector('.popup-close');
+
+        watchNowBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            popup.style.display = 'flex';
+        });
+
+        closeBtn.addEventListener('click', function() {
+            popup.style.display = 'none';
+        });
+
+        window.addEventListener('click', function(e) {
+            if (e.target === popup) {
+                popup.style.display = 'none';
+            }
+        });
+    });
+</script>
+</body>
+</html>

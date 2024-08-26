@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- ===== CSS ===== -->
+    <link rel="stylesheet" href="style.css">
+    <!-- ===== Boxicons CSS ===== -->
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <title>NEXANIMESTUDIO - Mangas</title>
+    <style type="text/css">
+        /* Basic Reset */
+        * { padding: 0; margin: 0; box-sizing: border-box; }
+
+        /* General Styles */
+        body { background-color: black; font-family: sans-serif; color: white; }
+        header { width: 100%; height: 100vh; background: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.2)), url('img/render.jpg') no-repeat center center/cover; }
+        nav { width: 100%; height: 100px; color: white; display: flex; justify-content: space-around; align-items: center; }
+        .logo { font-size: 2em; letter-spacing: 2px; }
+        .menu a { text-decoration: none; color: white; padding: 10px 20px; font-size: 20px; position: relative; }
+        .menu a:before { content: ''; position: absolute; top:0; left: 0; width:0%; height: 100%; border-bottom: 2px solid indianred; transition: 0.4s linear; }
+        .menu a:hover:before { width: 90%; }
+        .Join a { text-decoration: none; color: black; padding: 10px 20px; font-size: 20px; background: yellow; border-radius: 8px; transition: 0.4s; }
+        .Join a:hover { background: transparent; border: 1px solid indianred; }
+        .h-txt { max-width: 650px; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center; color: white; }
+        .h-txt span { letter-spacing: 5px; }
+        .h-txt h1 { font-size: 3.5em; }
+        .h-txt a { text-decoration: none; background: yellow; color: black; padding: 10px 20px; letter-spacing: 5px; transition: 0.4s; }
+        .h-txt a:hover { background: transparent; border: 1px solid indianred; color: black; }
+
+        /* Manga Section Styles */
+        .manga-section { padding: 50px 0; background-color: #121212; color: white; }
+        .manga-container { display: flex; flex-wrap: wrap; justify-content: space-around; margin: 0 50px; }
+        .manga-item { background-color: #333; margin: 20px; padding: 20px; border-radius: 10px; transition: background-color 0.4s, transform 0.4s; }
+        .manga-item img { width: 200px; height: 300px; border-radius: 10px; cursor: pointer; transition: transform 0.4s; }
+        .manga-item h3 { margin: 15px 0; }
+        .manga-item p { color: #bbb; margin-bottom: 15px; transition: color 0.4s; }
+        .manga-item a { text-decoration: none; background: yellow; color: black; padding: 10px 20px; border-radius: 8px; transition: background-color 0.4s; }
+        .manga-item a:hover { background: indianred; color: white; }
+
+        /* Hover and Click Effects */
+        .manga-item:hover, .manga-item.active { background-color: yellow; transform: scale(1.05); }
+        .manga-item:hover p, .manga-item.active p { color: black; }
+        .manga-item:hover a, .manga-item.active a { background-color: indianred; color: white; }
+
+        /* Suggested Mangas Section */
+        .suggested-section { padding: 50px 0; background-color: #222; color: white; text-align: center; }
+        .suggested-section h2 { font-size: 2.5em; margin-bottom: 20px; }
+        .suggested-container { display: flex; flex-wrap: wrap; justify-content: space-around; margin: 0 50px; }
+        .suggested-item { background-color: #444; margin: 20px; padding: 20px; border-radius: 10px; transition: background-color 0.4s, transform 0.4s; width: 200px; }
+        .suggested-item img { width: 150px; height: 200px; border-radius: 10px; cursor: pointer; transition: transform 0.4s; }
+        .suggested-item h3 { margin: 15px 0; }
+        .suggested-item:hover { background-color: yellow; transform: scale(1.05); }
+
+        /* About Section Styles */
+        .about-section { padding: 50px 0; background-color: #1a1a1a; color: white; text-align: center; }
+        .about-section h2 { font-size: 2.5em; margin-bottom: 20px; }
+        .about-section p { font-size: 1.2em; max-width: 800px; margin: 0 auto; line-height: 1.5; }
+        .about-section p span { color: indianred; }
+
+        /* Footer Styles */
+        footer { background-color: #000; color: white; text-align: center; padding: 20px 0; }
+        footer p { font-size: 1em; color: white; }
+        footer p span { color: indianred; }
+    </style>
+</head>
+<body>
+<header>
+    <nav>
+        <div class="nav-bar">
+            <i class='bx bx-menu sidebarOpen'></i>
+            <span class="logo navLogo"><a href="#">NEXMANGAS</a></span>
+            <div class="menu">
+                <div class="logo-toggle">
+                    <span class="logo"><a href="#">NEXMANGAS</a></span>
+                    <i class='bx bx-x siderbarClose'></i>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="manga.html">Mangas</a></li>
+                    <li><a href="mangaexplaination.html">Manga Explanation</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="#">O</a></li>
+                </ul>
+            </div>
+            <div class="darkLight-searchBox">
+                <div class="dark-light">
+                    <i class='bx bx-moon moon'></i>
+                    <i class='bx bx-sun sun'></i>
+                </div>
+                <div class="searchBox">
+                    <div class="searchToggle">
+                        <i class='bx bx-x cancel'></i>
+                        <i class='bx bx-search search'></i>
+                    </div>
+                    <div class="search-field">
+                        <input type="text" placeholder="Search...">
+                        <i class='bx bx-search'></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <section class="h-txt">
+        <span>Discover</span>
+        <h1>Our Manga Collection</h1>
+        <br>
+        <a href="#mangaSection">Explore Now</a>
+    </section>
+</header>
+
+<!-- Manga Section -->
+<section class="manga-section" id="mangaSection">
+    <div class="manga-container">
+        <div class="manga-item">
+            <img src="img/slr.jpg" alt="Manga 1">
+            <h3>Solo Leveling Ragnarok</h3>
+            <p>Continuous of solo leveling</p>
+            <a href="slr/slr.html">Read Now</a>
+        </div>
+        <div class="manga-item">
+            <img src="img/nicromace.jpg" alt="Manga 2">
+            <h3>Manga Title 2</h3>
+            <p>Description of Manga 2.</p>
+            <a href="#">Read Now</a>
+        </div>
+        <div class="manga-item">
+            <img src="img/max.jpg" alt="Manga 3">
+            <h3>Manga Title 3</h3>
+            <p>Description of Manga 3.</p>
+            <a href="#">Read Now</a>
+        </div>
+        <!-- Add more manga items as needed -->
+    </div>
+</section>
+
+<!-- Suggested Mangas Section -->
+<section class="suggested-section">
+    <h2>Suggested Mangas</h2>
+    <div class="suggested-container">
+        <div class="suggested-item">
+            <img src="img/suggested1.jpg" alt="Suggested Manga 1">
+            <h3>Suggested Title 1</
